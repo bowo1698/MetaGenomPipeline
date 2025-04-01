@@ -1,6 +1,7 @@
 # **📦 Pipeline Analisis Metagenomik (QIIME2 + R)** </br>
 
-## **🧰 Persiapan yang Dibutuhkan Software & Tools:**
+## **🧰 Persiapan yang Dibutuhkan**
+**Software & Tools:**
 
 -   QIIME2 (versi yang diuji: 2023.5)
 
