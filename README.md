@@ -1,10 +1,14 @@
-# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)**
+# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)** </br>
 
 ## **🧰 Persiapan yang Dibutuhkan Software & Tools:**
 
 -   QIIME2 (versi yang diuji: 2023.5)
 
 -   R (versi yang diuji: 4.3.2)
+
+-   R studio atau Jupyter notebook
+
+-   Anaconda
 
 **Paket R yang diperlukan:**
 
