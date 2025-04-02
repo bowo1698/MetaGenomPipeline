@@ -3214,8 +3214,8 @@ yang valid dan kemungkinan error dalam data.</p>
 <div id="step-3-impor-barcode-dan-sekuens-ke-dalam-qiime-artifact" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Step 3: Impor barcode
 dan sekuens ke dalam QIIME <em>artifact</em></h1>
-<p>Sebagai langkah akhir dari bagian tugas ini, kita akan mengimpor file
-barcode dan sekuens ke dalam <strong>artifact QIIME</strong>.</p>
+<p>Sebagai langkah akhir, kita akan mengimpor file barcode dan sekuens
+ke dalam <strong>artifact QIIME</strong>.</p>
 <p>Untuk menjaga kerapihan dan menghindari kesalahan dalam mengunggah
 file besar atau sementara ke GitHub, semua hasil QIIME (termasuk
 artifacts dan visualisasi) disimpan dalam folder terpisah bernama
@@ -3266,6 +3266,15 @@ Data format: EMPSingleEndDirFmt</code></pre>
 <div id="step-3-demultiplex" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Step 3 :
 Demultiplex</h1>
+<p>Demultiplexing adalah proses memisahkan data sekuens mentah
+berdasarkan barcode atau indeks yang digunakan saat proses sekuensing.
+Dalam studi metagenomik, beberapa sampel sering dikumpulkan dan
+disekuensing secara bersamaan (multiplexing) untuk efisiensi biaya dan
+waktu. Barcode unik ditambahkan ke setiap sampel sebelum sekuensing, dan
+demultiplexing dilakukan setelahnya untuk mengelompokkan kembali sekuens
+sesuai asal sampelnya. Di QIIME2, proses ini biasanya dilakukan saat
+impor data menggunakan file metadata yang berisi informasi barcode tiap
+sampel.</p>
 <blockquote>
 <p><strong>Catatan:</strong></p>
 <p>📁 Pada langkah ini, kita akan menggunakan beberapa file dari langkah

@@ -422,6 +422,8 @@ Data format: EMPSingleEndDirFmt
 
 # Step 3 : Demultiplex
 
+Demultiplexing adalah proses memisahkan data sekuens mentah berdasarkan barcode atau indeks yang digunakan saat proses sekuensing. Dalam studi metagenomik, beberapa sampel sering dikumpulkan dan disekuensing secara bersamaan (multiplexing) untuk efisiensi biaya dan waktu. Barcode unik ditambahkan ke setiap sampel sebelum sekuensing, dan demultiplexing dilakukan setelahnya untuk mengelompokkan kembali sekuens sesuai asal sampelnya. Di QIIME2, proses ini biasanya dilakukan saat impor data menggunakan file metadata yang berisi informasi barcode tiap sampel.
+
 > **Catatan:**
 >
 > 📁 Pada langkah ini, kita akan menggunakan beberapa file dari langkah sebelumnya, yaitu:
