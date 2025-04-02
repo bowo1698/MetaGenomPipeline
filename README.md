@@ -1,6 +1,7 @@
-# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)** </br>
+# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)** 
 
 ## **🧰 Persiapan yang Dibutuhkan**
+
 **Software & Tools:**
 
 -   QIIME2 (versi yang diuji: 2023.5)
@@ -40,6 +41,66 @@ project/
 ├── qiime/           # Output dari QIIME2
 ├── cache/           # File hasil proses sementara
 └── figures/         # Gambar dan visualisasi hasil analisis
+```
+
+## ⚙️ Instalasi (Windows & UNIX)
+
+**🔧 1. Instalasi QIIME2**
+
+Rekomendasi: Gunakan Conda (melalui Anaconda atau Miniconda) untuk mengelola lingkungan QIIME2 secara terpisah.
+
+-   🔹 UNIX (Linux/macOS)
+
+    ``` bash
+    # !bash
+    # Install Miniconda (jika belum ada)
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
+
+    # Buat dan aktifkan environment QIIME2
+    wget https://data.qiime2.org/distro/core/qiime2-2023.5-py38-linux-conda.yml
+    conda env create -n qiime2-2023.5 --file qiime2-2023.5-py38-linux-conda.yml
+    conda activate qiime2-2023.5
+    ```
+
+-   🔸 Windows (via WSL2 / Ubuntu Terminal)
+
+    > **Catatan:** QIIME2 tidak mendukung Windows secara native. Disarankan menggunakan **WSL2 (Windows Subsystem for Linux)** dengan Ubuntu.
+
+    -   Aktifkan WSL dan install Ubuntu melalui Microsoft Store.
+
+    -   Jalankan langkah instalasi UNIX seperti di atas di dalam terminal Ubuntu
+
+**🔧 2. Instalasi R & RStudio**
+
+-   🔹 UNIX (Linux/macOS)
+
+    Install R:
+
+    ``` bash
+    sudo apt update
+    sudo apt install r-base
+    ```
+
+    Download dan install RStudio dari: <https://posit.co/download/rstudio-desktop/>
+
+-   🔸 Windows (via WSL2 / Ubuntu Terminal)
+
+    Install R dari: <https://cran.r-project.org/>
+
+    Install RStudio dari: <https://posit.co/download/rstudio-desktop/>
+
+**📦 3. Instalasi Paket R**
+
+Setelah R terinstall, buka R atau RStudio dan jalankan:
+
+``` R
+install.packages(c("tidyverse", "ggplot2", "ggraph", "patchwork",
+                   "vegan", "scales", "RColorBrewer", "igraph"))
+
+# Install qiime2R dari GitHub
+if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
+devtools::install_github("jbisanz/qiime2R")
 ```
 
 ## 🧪 Langkah-Langkah Pipeline
