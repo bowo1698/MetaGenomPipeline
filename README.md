@@ -105,6 +105,8 @@ devtools::install_github("jbisanz/qiime2R")
 
 ## 🧪 Langkah-Langkah Pipeline
 
+Untuk menjalankan pipeline analisis metagenomic, cukup buka file `Pipeline.Rmd` di RStudio. Semua data yang tersedia adalah contoh, jadi bisa menyesuaikan dengan data yang anda miliki. Pada dasarnya, analisis metagenomic berbasis sekuen 16S adalah sama, mengikuti langkah-langkah berikut.
+
 **1. 🔽 Pengunduhan Data**
 
 Unduh data sekuensing mentah menggunakan `wget` atau tempatkan secara manual ke dalam folder `raw_data/`.
