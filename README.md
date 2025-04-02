@@ -1,4 +1,10 @@
-# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)** 
+# **📦 Pipeline Analisis Metagenomik (QIIME2 + R)**
+
+## 🧬 Overview: Analisis Metagenomik 16S rRNA
+
+Analisis metagenomik 16S rRNA adalah metode untuk mengungkap komposisi dan struktur komunitas mikroba dari suatu sampel lingkungan tanpa perlu mengkultur mikroorganisme secara langsung. Proses ini dimulai dari ekstraksi DNA total dari sampel (misalnya tanah, air, sedimen, atau isi usus), diikuti oleh amplifikasi gen 16S rRNA menggunakan primer universal. Produk PCR kemudian disekuensing menggunakan platform seperti [Illumina MiSeq](https://sapac.illumina.com/systems/sequencing-platforms/miseq.html), menghasilkan data sekuens pendek (short reads) dalam format **.fastq.gz**.
+
+Pipeline ini menggunakan QIIME2 untuk mengolah data sekuens mentah—meliputi trimming, denoising, identifikasi **ASV** (*Amplicon Sequence Variant*), serta analisis filogenetik dan keanekaragaman mikroba (**alpha** dan **beta diversity**). Selanjutnya, data dianalisis dan divisualisasikan secara lebih mendalam di R menggunakan berbagai paket seperti `tidyverse`, `qiime2R`, dan `vegan`. Pendekatan ini memungkinkan eksplorasi komunitas mikroba berdasarkan kondisi lingkungan atau perlakuan eksperimental secara efisien dan reproducible.
 
 ## **🧰 Persiapan yang Dibutuhkan**
 
@@ -94,7 +100,7 @@ Rekomendasi: Gunakan Conda (melalui Anaconda atau Miniconda) untuk mengelola lin
 
 Setelah R terinstall, buka R atau RStudio dan jalankan:
 
-``` R
+``` r
 install.packages(c("tidyverse", "ggplot2", "ggraph", "patchwork",
                    "vegan", "scales", "RColorBrewer", "igraph"))
 
@@ -104,8 +110,6 @@ devtools::install_github("jbisanz/qiime2R")
 ```
 
 ## 🧪 Langkah-Langkah Pipeline
-
-Untuk menjalankan pipeline analisis metagenomic, cukup buka file `Pipeline.Rmd` di RStudio. Semua data yang tersedia adalah contoh, jadi bisa menyesuaikan dengan data yang anda miliki. Pada dasarnya, analisis metagenomic berbasis sekuen 16S adalah sama, mengikuti langkah-langkah berikut.
 
 **1. 🔽 Pengunduhan Data**
 

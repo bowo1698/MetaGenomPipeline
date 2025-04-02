@@ -370,7 +370,7 @@ Secara keseluruhan, grafik ini membantu membedakan antara barcode yang valid dan
 
 # Step 3: Impor barcode dan sekuens ke dalam QIIME *artifact*
 
-Sebagai langkah akhir dari bagian tugas ini, kita akan mengimpor file barcode dan sekuens ke dalam **artifact QIIME**.
+Sebagai langkah akhir, kita akan mengimpor file barcode dan sekuens ke dalam **artifact QIIME**.
 
 Untuk menjaga kerapihan dan menghindari kesalahan dalam mengunggah file besar atau sementara ke GitHub, semua hasil QIIME (termasuk artifacts dan visualisasi) disimpan dalam folder terpisah bernama `qiime`.
 
